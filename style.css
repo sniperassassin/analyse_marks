@@ -1,0 +1,150 @@
+/* ... Previous styles ... */
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding-top: 400px;
+    }
+
+    .dashboard {
+        margin-top: 20px;
+    }
+
+    .subject-container {
+        width: 100%;
+    }
+}
+
+label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid #2196F3;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border-bottom-color 0.3s;
+}
+
+input:focus {
+    border-bottom-color: #4CAF50;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 400px;
+}
+
+.dashboard {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+}
+
+/* Modern 3D effect for graphs */
+.graph {
+    margin-top: 20px;
+    padding-top: 20px;
+    perspective: 1000px;
+}
+
+.graph h3 {
+    transform: translateZ(50px);
+    transition: transform 0.5s ease;
+}
+
+.graph:hover h3 {
+    transform: translateZ(100px);
+}
+
+/* Modern 3D effect for pie charts */
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        #4caf50 0% 50%,
+        #f44336 50% 100%
+    );
+    margin: 0 auto;
+    margin-top: 20px;
+    perspective: 1000px;
+}
+
+.pie-chart:hover {
+    transform: rotateY(180deg);
+    transition: transform 0.5s ease;
+}
+
+/* ... Previous styles ... */
+
+/* Slide animation for input containers */
+.subject-container {
+    opacity: 1;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.subject-container.hidden {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+#result {
+    margin-top : 50px;
+    margin-left : 60px;
+    text-align : left;
+}
+
+.styled-line {
+    width: 100%;
+    height: 4px;
+    margin-left : 10px;
+    background: linear-gradient(to right, #4CAF50 85%, #FF5733 15%);
+}
+/* ... Add your other styles ... */
+

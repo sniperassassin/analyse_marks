@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marks Percentage Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <div class="dashboard">
+        <h2>Marks Percentage Dashboard</h2>
+        <br>
+        <!-- Form for input fields -->
+        <form id="subjectForm">
+            <!-- Input fields for each subject -->
+            <div class="subject-container">
+                <div><strong>Physics</strong></div>
+                <input type="number" id="physicsTotalAttempt" placeholder="Total Questions Attempted"><br>
+                <input type="number" id="physicsTotalIncorrect" placeholder="Total Incorrect Questions"><br>
+                <input type="number" id="TotalQuestions" placeholder="Total Questions Necessary"><br>
+            </div>
+            <div class="subject-container">
+                <div><strong>Chemistry</strong></div>
+                <input type="number" id="chemistryTotalAttempt" placeholder="Total Questions Attempted"><br>
+                <input type="number" id="chemistryTotalIncorrect" placeholder="Total Incorrect"><br>
+            </div>
+            <div class="subject-container">
+                <div><strong>Botany</strong></div>
+                <input type="number" id="botanyTotalAttempt" placeholder="Total Questions Attempted"><br>
+                <input type="number" id="botanyTotalIncorrect" placeholder="Total Incorrect"><br>
+            </div>
+            <div class="subject-container">
+                <div><strong>Zoology</strong></div>
+                <input type="number" id="zoologyTotalAttempt" placeholder="Total Questions Attempted"><br>
+                <input type="number" id="zoologyTotalIncorrect" placeholder="Total Incorrect"><br>
+            </div>
+            <!-- Add more subject containers as needed -->
+            <br>
+            <!-- Navigation buttons -->
+            <button type="button" onclick="prevSubject()">Previous</button>
+            <button type="button" onclick="nextSubject()">Next</button>
+            <button type="button" onclick="submitForm()">Submit</button>
+            <br>
+        </form>
+        <div id="result">
+            <div id="totalMarks"></div>
+            <div id="resultPhysics"></div>
+            <div id="resultChemistry"></div>
+            <div id="resultBotany"></div>
+            <div id="resultZoology"></div>
+            <div id="totalMissed"></div>
+        </div>
+        <br>
+        <!--<div class="styled-line" style="width:100%;"></div>
+        <div><span>&#9757;</span></div>-->
+    </div>
+
+    <div class="dashboard">
+        <h2>Analysis Dashboard</h2>
+
+        <!-- Placeholder for graphs and pie charts -->
+        <div class="graph">
+            <h3>Accuracy Graph</h3>
+            <canvas id="accuracyGraph" width="300" height="150"></canvas>
+        </div>
+        <div class="graph">
+            <h3>Attempt Graph</h3>
+            <canvas id="attemptGraph" width="300" height="150"></canvas>
+        </div>
+        <div class="graph" >
+            <h3>Marks Distribution</h3>
+            <canvas id="pieChart" width="300" height="300"></canvas>
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
